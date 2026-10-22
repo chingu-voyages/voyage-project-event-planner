@@ -15,9 +15,9 @@ Voyage Project - Learning Path Generator
 
 Hi, Chingus! 👋
 
-You've probably had that moment of staring at a new career goal and wondering: *where do I even start?* Whether it's breaking into web development, leveling up to a senior engineer, or pivoting into data science, the sheer number of tutorials, courses, and roadmaps out there can be overwhelming.
+You've probably had that moment of staring at a new career goal and wondering: *where do I even start?* Whether it's breaking into web development, leveling up to a senior engineer, or pivoting into data science, the sheer number of tutorials, courses, and roadmaps out there can be overwhelming. Here, you will gain experience by working on simulated teams while creating real projects.
 
-In this Voyage, your team will design and build a **Learning Path Generator** — a web application that uses AI to turn a person's career goals into a clear, personalized, step-by-step learning journey. Instead of guessing which skills to learn next, users will get a tailored path that adapts to where they are and where they want to go.
+In this Voyage, your team will design and build an **Event Planner** — a web application that uses AI to provide organizations with advanced qualitative and quantitative analytics and insights to gauge event performance as well as identify areas for improvement for future events. These analytics will enable companies to enhance their sales and marketing strategy in order to grow its customer base.
 
 This is a great project because it combines thoughtful prompt engineering, full-stack development, and UI/UX design — all skills you'll use throughout your career as a web developer. You'll work with AI APIs to generate meaningful, structured content, design an interface that makes complex information easy to navigate, and collaborate as a team to bring it all together.
 
@@ -84,7 +84,7 @@ add optional items and enhancements once you've completed the basic app.
 * [ ] Navigation options (as applicable)
 
   * **Home** - displays the landing page when clicked
-  * **Results** - displays the generated learning path, progress tracking, and any statistics your team decides to track
+  * **Results** - displays event insights and AI analytics
 
 * [ ] Screens
 
@@ -94,9 +94,9 @@ add optional items and enhancements once you've completed the basic app.
 
     * Content that advertises the purpose of the app and its benefits
 
-    **_Optional:_** user authentication is not required for the MVP — see [Stretch Goals](#stretch-goals) if your team wants to add it.
+    **_Optional:_** user authentication is not required for the MVP — see [Stretch Goals](#stretch-goals) if your team wants to add it. However, there needs to be a guest log in that allows for a trial use of the application.
 
-  * Results Screen (design is intentionally left open for your team to define — it should surface the generated path and, where applicable, progress tracking)
+  * Results Screen (design is intentionally left open for your team to define — it should display event data such as attendance, revenue, etc.).
 
 * [ ] User Interface and Experience (UI/UX)
 
@@ -129,19 +129,15 @@ add optional items and enhancements once you've completed the basic app.
 
 ### Basic Requirements (MVP)
 These are the features your app **must** include. Think of them as the rules of
-the voyage — without them, the app isn't really a Learning Path Generator!
+the voyage — without them, the app isn't really an Event Planner!
 
 #### User Input
-* [ ] The app must provide a **form or input flow** where the user can enter their
-  career goal (e.g., "Frontend Developer," "Data Scientist," "UX Designer").
-* [ ] The app must collect at least a few pieces of context to personalize the path, such as:
-  * The user's **current skill level** (e.g., Beginner, Intermediate, Advanced).
-  * Any **relevant background or existing skills** (free text or a short list).
-  * A **time commitment or timeframe** (e.g., "5 hours/week," "3 months").
-* [ ] The app must validate user input before submission — for example, the
-  career goal field should not be left empty.
+* [ ] The app must include a guest log in that allows prospective organizations to trial the app (Tiers 1 - 3).
+* [ ] The app must include a section that allows organizers to create and edit an event by including information such as name, date, time, location, description, and expected attendance (Tiers 1 - 3).
+* [ ] The app must allow for the managing of attendee list - add attendee names, edit details, search by name or registration ID (Tiers 1 - 3).
+* [ ] The app must have a mechanism for recording check ins - mark attendee as checked in, prevent duplicate check ins, and allow accidental check ins to be reversed (Tiers 1 - 3).
 * [ ] Input fields should have clear labels and placeholder text so users know
-  what kind of information to enter.
+  what kind of information to enter (Tiers 1 - 3).
 
 #### AI-Powered Path Generation
 * [ ] The app must send the user's input to an **AI API** to generate a personalized learning path.
