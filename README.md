@@ -132,57 +132,25 @@ These are the features your app **must** include. Think of them as the rules of
 the voyage — without them, the app isn't really an Event Planner!
 
 #### User Input
-* [ ] The app must include a guest log in that allows prospective organizations to trial the app (Tiers 1 - 3).
+* [ ] The app must include a guest log in that allows prospective organizations to trial the app (Tiers 2 & 3).
 * [ ] The app must include a section that allows organizers to create and edit an event by including information such as name, date, time, location, description, and expected attendance (Tiers 1 - 3).
 * [ ] The app must allow for the managing of attendee list - add attendee names, edit details, search by name or registration ID (Tiers 1 - 3).
 * [ ] The app must have a mechanism for recording check ins - mark attendee as checked in, prevent duplicate check ins, and allow accidental check ins to be reversed (Tiers 1 - 3).
 * [ ] Input fields should have clear labels and placeholder text so users know
   what kind of information to enter (Tiers 1 - 3).
 
-#### AI-Powered Path Generation
-* [ ] The app must send the user's input to an **AI API** to generate a personalized learning path.
-* [ ] The generated learning path must be broken down into **clear, sequential
-  steps or milestones** (not just a wall of text).
-* [ ] Each step in the path must include, at minimum:
-  * A **title** (e.g., "Learn HTML & CSS Basics").
-  * A short **description** of what the step covers and why it matters.
-  * An **estimated time** to complete the step.
-* [ ] While the AI request is processing, the app must display a **loading state**
-  (e.g., spinner or "Generating your path...") so the user knows the app is working.
-* [ ] The app must handle and gracefully display an error if the AI request fails
-  (e.g., "Something went wrong generating your path. Please try again.").
-
-#### Displaying the Learning Path
-* [ ] The generated path must be displayed in a **clear, organized format** — for
-  example, a vertical roadmap, a numbered list, or a series of cards.
-* [ ] Each step must be **visually distinct** so users can easily tell one
-  milestone from the next.
-* [ ] The path should clearly show **progression/order** (e.g., numbered steps,
-  connecting lines, or a progress bar).
-
-#### Tracking Progress *(Required for Tier 2 & 3; stretch goal for Tier 1)*
-* [ ] Users must be able to **mark a step as complete** (e.g., checking it off).
-* [ ] Completed steps must be **visually marked** as done (e.g., checkmark,
-  strikethrough, or color change) so progress is easy to see at a glance.
-* [ ] The app must display an overall **progress indicator** (e.g., "3 of 8 steps
-  completed" or a progress bar) that updates as steps are checked off.
-
-#### Regenerating & Starting Over
-* [ ] After a path is generated, the user must have the option to **generate a
-  new path** with different input (new goal, skill level, etc.).
-* [ ] The app must clear or replace the old path when a new one is generated, so
-  the user isn't looking at stale data.
-
-#### Input Validation & Error Handling
-* [ ] The app should not allow users to submit the form with missing required
-  fields (e.g., no career goal entered). Display a clear message explaining
-  what's missing.
-* [ ] Error messages must be clear and helpful, not just "Error." For example:
-  "Please enter a career goal before generating your path."
-* [ ] Error messages should disappear or be cleared once the user corrects their
-  input.
-* [ ] If the AI returns an unexpected or malformed response, the app must handle
-  it gracefully rather than crashing or showing a blank screen.
+#### AI Requirements 
+* [ ] The app must send the user's input to an **AI API** to provide post-event analysis including size, demographics, and revenue, etc. (Tiers 1 - 3)
+* [ ]  AI must be able to create a summary and compare event data against expected attendance. (Tiers 1 - 3)
+* [ ] Organizers must be able to specify target audience, event purpose, tone, and preferred call to action. (Tiers 2 & 3)
+* [ ] Application must be able to generate a promotional copy by creating an email subject and body along with a short social media caption using event details. (Tiers 2 & 3)
+* [ ] Application must be able to preserve confirmed event information by including correct date, time, location, and registration link. (Instead of inventing information, the app should ask for missing information.). (Tiers 2 & 3)
+* [ ] Organizers must be able to edit the draft or request changes such as “make it shorter” or “use a friendlier tone.” (Tiers 2 & 3)
+* [ ] The app must maintain an event history by storing completed events and allowing organizers to select at least two events for comparison. (Tier 3)
+* [ ] The application must be able to compare registrations, actual attendance, attendance rates, and performance against each event’s target. (Tier 3)
+* [ ] The app must be able to capture promotional sources by recording an optional “How did you hear about this event?” (Use consistent options such as email, social media, 
+referral, etc. (Tier 3)
+* [ ] The app must compare turnout by source by showing registrations and check ins associated with each promotional source. It must also include an “unknown” category for missing responses. (Tier 3)
 
 ## Stretch Goals
 Once you complete the basic application, you may enhance it with any of the following optional stretch goals. Make sure that any of these you choose matches the capabilities of your team.
@@ -194,86 +162,24 @@ Once you complete the basic application, you may enhance it with any of the foll
 #### Account, Personalization & AI Q&A
 
 * [ ] Authenticate users via Google or GitHub to enhance your app's security.
-* [ ] The app is already AI powered — use it to provide users with **follow-up Q&A** on
-  any step in their path (e.g., "Why do I need to learn this?" or "Suggest
-  an alternative resource"). The
+* [ ] The app is already AI powered — use it to provide attendees with **follow-up survey** after the event ends. The
   [Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is
   sufficient for this.
 
-#### Enhanced Path Generation
+#### Event Promotion
 
-* [ ] **Skill Assessment Quiz** — Before generating a path, offer the user a
-  short quiz to more accurately gauge their current skill level instead of
-  relying on self-reported input.
-* [ ] **Multiple Path Variations** — Generate 2–3 different path options (e.g.,
-  "Fast Track," "Balanced," "In-Depth") based on the same goal, and let the
-  user pick the one that fits their pace.
-* [ ] **Resource Recommendations** — For each step in the path, have the AI
-  suggest specific free or paid resources (courses, articles, videos,
-  documentation) rather than just a description.
-* [ ] **Prerequisite Detection** — Allow the AI to flag prerequisite knowledge
-  the user may be missing based on their stated background, and insert
-  foundational steps automatically.
-* [ ] **Regenerate a Single Step** — Let users regenerate or refine just one
-  step in the path (e.g., "make this step easier" or "give me a different
-  resource") without regenerating the entire path.
+* [ ] **Enhanced Automated Promotion** — the application automatically sends event information to past attendees based on geographic location (e.g. Organizer has an event in Dallas. Application sends event information to past attendees in Dallas and surrounding locations).
 
-#### Animations & Visual Polish
+#### Event Performance Insights
 
-* [ ] Add **smooth transition animations** when a step is marked complete or
-  when a new path is generated.
-* [ ] Add a **loading animation** (beyond a simple spinner) while the AI
-  generates the path, to make the wait feel more engaging.
-* [ ] Add a **color theme** option, allowing the user to switch between a
-  **Light Mode** and a **Dark Mode** for the app interface. Save the user's
-  preference using `localStorage` so it persists between sessions.
-* [ ] Add a **visual roadmap/timeline view** (e.g., a winding path or vertical
-  timeline with icons) as an alternative to the default list/card view.
+* [ ] **Quantitative Analysis** — Allow organizers to observe trends in event data over a selected period of time.
 
-#### Progress & Sharing
+#### Event Ratings
 
-* [ ] **Progress Dashboard** — Track and display the user's stats across
-  multiple learning paths, including:
-  * Total paths generated
-  * Total steps completed
-  * Current streak (consecutive days with a completed step)
-  * Overall completion percentage per path
-  * Store the statistics in the browser using `localStorage` so they
-    persist between sessions.
-* [ ] **Share Progress** — Give the user a **"Share"** button that generates a
-  shareable summary or image of their learning path progress (e.g.,
-  "I've completed 6/10 steps toward becoming a Frontend Developer! 🚀").
-* [ ] **Export Path** — Allow users to export their learning path as a PDF or
-  markdown checklist they can save or print.
+* [ ] **User Experience** — Allow AI to collect data on user experience, provide a summary, as well as suggest ways to improve user experience for future events.
 
-#### Accessibility
 
-* [ ] Make the app fully **keyboard accessible** — every action (submitting the
-  form, marking a step complete, generating a new path, opening settings)
-  should be achievable without a mouse.
-* [ ] Add **screen reader support** by using proper ARIA labels and roles on
-  form inputs, step cards, and progress indicators, so that users who use
-  assistive technology can understand and interact with the app.
 
-#### Responsive Design
-
-* [ ] Ensure the full app is **fully usable on mobile devices** (small
-  touchscreens), not just desktop browsers. The roadmap/step layout should
-  adapt cleanly to narrow viewports.
-
-#### Backend / Full-Stack *(Required for Tier 3)*
-
-* [ ] Build a **backend server** (e.g., using Node.js/Express) to:
-  * Store generated learning paths in a database instead of only in local
-    browser storage.
-  * Store and retrieve **user progress** server-side, so it persists across
-    devices and browsers.
-* [ ] Implement **user authentication** (e.g., via GitHub OAuth or Google
-  Sign-In) so users can log in and access their saved learning paths from any
-  device.
-* [ ] Allow users to **save multiple learning paths** (e.g., one for "Frontend
-  Developer" and another for "Data Analyst") and switch between them from a
-  dashboard.
 
 ## Acceptance Criteria
 
@@ -284,16 +190,6 @@ Your finished project should meet all of the following minimum standards:
   profiles of all team members.
 * [ ] The deployed app is accessible and fully usable in a modern web browser
   without any console errors.
-* [ ] The form validates required input (e.g., career goal) before submission,
-  and displays clear, specific error messages when input is missing or invalid.
-* [ ] The generated learning path is displayed in a clear, organized format with
-  each step visually distinct and progression/order clearly indicated.
-* [ ] A loading state is shown while the AI request is processing, and a clear
-  error message is shown if the AI request fails.
-* [ ] *(Tier 2 & 3)* Users can mark steps complete, completed steps are visually
-  marked, and an overall progress indicator updates accordingly.
-* [ ] Users can regenerate a new path with different input, and the old path is
-  cleared or replaced rather than left on screen alongside the new one.
 * [ ] The UI is responsive and usable on both desktop and mobile screen sizes.
 * [ ] If your team implemented any stretch goals, add their acceptance criteria
   directly to your repo's `README.md`.
