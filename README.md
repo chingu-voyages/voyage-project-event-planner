@@ -140,7 +140,7 @@ the voyage — without them, the app isn't really an Event Planner!
   what kind of information to enter (Tiers 1 - 3).
 
 #### AI Requirements 
-* [ ] The app must send the user's input to an **AI API** to provide post-event analysis including size, demographics, and revenue, etc. (Tiers 1 - 3)
+* [ ] The app must send the user's input to an **AI API** to provide post-event analysis including size, demographics, and revenue, etc. (Tiers 1 - 3). For example, attendance, revenue, etc. AI would provide qualitative and quantantitative analysis to assist planners with gauging the success of the event.
 * [ ]  AI must be able to create a summary and compare event data against expected attendance. (Tiers 1 - 3)
 * [ ] Organizers must be able to specify target audience, event purpose, tone, and preferred call to action. (Tiers 2 & 3)
 * [ ] Application must be able to generate a promotional copy by creating an email subject and body along with a short social media caption using event details. (Tiers 2 & 3)
